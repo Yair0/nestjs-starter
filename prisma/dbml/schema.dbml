@@ -1,0 +1,21 @@
+//// ------------------------------------------------------
+//// THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+//// ------------------------------------------------------
+
+Table User {
+  id Int [pk, increment]
+  name String
+  email String
+  posts Post
+}
+
+Table Post {
+  id Int [pk, increment]
+  title String
+  content String
+  published Boolean [not null, default: false]
+  authorId Int [not null]
+  author User [not null]
+}
+
+Ref: Post.authorId > User.id

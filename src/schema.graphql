@@ -1,0 +1,36 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Post {
+  id: ID!
+  title: String
+  content: String
+  published: Boolean!
+  authorId: ID!
+  author: User!
+}
+
+type User {
+  id: ID!
+  name: String
+  email: String
+  posts: [Post]!
+}
+
+type Query {
+  helloWorld: String!
+  hello(name: String!): String!
+  me: User!
+  userPosts(userId: Int!): [Post!]!
+  post(postId: Int!): Post!
+}
+
+type Mutation {
+  updateUser(data: UpdateUserInput!): User!
+}
+
+input UpdateUserInput {
+  name: String
+  email: String
+}

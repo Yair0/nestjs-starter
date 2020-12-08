@@ -1,0 +1,5 @@
+# Prisma Migrate lockfile v1
+
+20201207205334-init
+20201207210132-fix-user
+20201208041419-posts-in-user
